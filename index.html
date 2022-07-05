@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>PinApp - Clientes</title>
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body onload="init()">
+        <section class="cliente-seccion">
+            <h4>Ingrese un cliente</h4>
+            <input class="control" type="text" name="nombre" id="nombre" placeholder="Ingrese un nombre">
+            <input class="control" type="text" name="apellido" id="apellido" placeholder="Ingrese un apellido">
+            <input class="control" type="number" name="edad" id="edad" placeholder="Ingrese una edad">
+            <input class="control" type="date" name="fecha_de_nacimiento" id="fecha_de_nacimiento" placeholder="Ingrese fecha de nacimiento">
+            <input class="my-button" type="submit" value="Registrar" onclick="registerCliente()">
+        </section>
+        <section class="cliente-seccion">
+            <h4>Edad Promedio</h4>
+            <p id="edad-promedio">Edad promedio: </p>
+            <p id="desviacion-estandar">Desviación estándar: </p>
+        </section>
+        <section class="cliente-seccion my-table">
+            <h4>Clientes</h4>
+            <table >
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                        <th>Fecha de nacimiento</th>
+                        <th>Fecha probable de muerte</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-clientes">
+                </tbody>
+            </table>
+        </section>
+        <div class="esperando invisible" id="bloqueo"></div>
+        <script src="scripts.js"></script>
+        <!--script src="https://unpkg.com/axios/dist/axios.min.js"></script-->
+    </body>
+</html>
